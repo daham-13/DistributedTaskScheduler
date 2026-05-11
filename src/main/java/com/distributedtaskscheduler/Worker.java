@@ -1,12 +1,10 @@
 package com.distributedtaskscheduler;
 
-import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 
 public class Worker implements Runnable {
 
     private final BlockingQueue<ClientRequest> taskQueue;
-    private final Random random = new Random();
     private volatile boolean running = true;
 
     public Worker(BlockingQueue<ClientRequest> taskQueue) {
